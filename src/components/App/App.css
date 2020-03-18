@@ -6,8 +6,19 @@
 
 .app {
   display: flex;
-  /* background: #141527; */
+  background: #141527;
   height: 100vh;
   text-align: center;
   width: 100%;
+}
+
+.leftColumn {
+  width: 20%;
+  color: white;
+  position: sticky;
+}
+
+.rightColumn {
+  width: 80%;
+  overflow-y: scroll;
 }
