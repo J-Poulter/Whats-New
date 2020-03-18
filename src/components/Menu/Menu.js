@@ -7,26 +7,26 @@ import './Menu.css'
   })*/
   return (
     <div>
-      <h1>What's New?</h1>
+      <h1>What's <span>New?</span></h1>
       <div>
         <icon></icon>
-        <p>Local News</p>
+        <button className='menuButton'>★ Local News</button>
       </div>
       <div>
         <icon></icon>
-        <p>Technology</p>
+        <button className='menuButton'>💡 Technology</button>
       </div>
       <div>
         <icon></icon>
-        <p>Entertainment</p>
+        <button className='menuButton'>🎦 Entertainment</button>
       </div>
       <div>
         <icon></icon>
-        <p>Science</p>
+        <button className='menuButton'>🔬 Science</button>
       </div>
       <div>
         <icon></icon>
-        <p>Health</p>
+        <button className='menuButton'>🌡 Health</button>
       </div>
     </div>
   )
