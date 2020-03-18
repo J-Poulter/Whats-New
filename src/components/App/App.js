@@ -14,21 +14,25 @@ import './App.css';
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      local,
-      science,
-      categories:[],
-      newThing: ''
-    }
+    this.state = {local}
+    this.categories = [entertainment, local, health, science, technology]
+  }
+
+
+  selectCategory = (categoryTopic) => {
+    this.setState({categoryTopic})
   }
 
   render () {
     return (
-      <div className="app">
-        YOUR CODE GOES HERE!
-        <Menu categories={this.state.categories}
-          newThing={this.state.newThing}/>
-        <SearchForm />
+      <div className='app'>
+        <div className='leftColumn'>
+          <Menu categories={this.state.categories}/>
+        </div>
+        <div className='rightColumn'>
+          <SearchForm />
+          <NewsContainer local={this.state.local}/>
+        </div>
       </div>
     );
   }
