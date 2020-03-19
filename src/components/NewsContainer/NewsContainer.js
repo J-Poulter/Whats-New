@@ -7,7 +7,7 @@ const NewsContainer = (props) => {
   return (
     <section> 
       {
-        props.local.map(article => (
+        props.category.map(article => (
           <NewsArticle 
             key={article.id}
             img={article.img}
