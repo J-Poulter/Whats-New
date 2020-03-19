@@ -4,16 +4,32 @@ import './SearchForm.css';
 class SearchForm extends Component {
   constructor() {
     super();
-    this.state = {}
+    this.state = { searchText: '' }
+  }
+
+  updateState = (event) => {
+    this.setState({searchText: event.target.value})
+  }
+
+  submitFilteredArticles = (event) => {
+
   }
     
-  return (
-    <form>
-      <input placeholder='Search for news article here.' className='searchInput'/>
-      <button className='searchButton' onClick={() => {
-        let filteredResults = props.category.filter(article => )
-      }}>Search Now</button>
-    </form>
-  )
+  render() {
+    return (
+      <form>
+        <input 
+          name='searchText'
+          placeholder='Search for news article here.' 
+          className='searchInput'
+          onChange={this.updateState}
+          value={this.state.searchText}
+        />
+        <button className='searchButton' onClick={this.submitFilteredArticles}>
+          Search Now
+        </button>
+      </form>
+    )
+  }
 }
 export default SearchForm;
