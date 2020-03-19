@@ -17,7 +17,6 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "lint": "./node_modules/eslint/bin/eslint.js src"
   "browserslist": {
     "production": [
       ">0.2%",
