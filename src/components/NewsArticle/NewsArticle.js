@@ -5,7 +5,7 @@ const NewsArticle = (props) => {
 
   return (
     <article className='articleCard' id={props.key}>
-      <img src={props.img} className='articleImg'></img>
+      <img src={props.img} className='articleImg' alt='Failed to Load'></img>
       <div className='cardInfo'>
         <h2 className='articleTitle'>{props.headline}</h2>
         <p className='articleDescription'>{props.description}</p>
