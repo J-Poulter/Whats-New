@@ -36,7 +36,8 @@ class App extends Component {
             selectCategory={this.selectCategory}/>
         </div>
         <div className='rightColumn'>
-          <SearchForm />
+          <SearchForm category={this.state.category}
+            selectCategory={this.selectCategory}/>
           <NewsContainer category={this.state.category}/>
         </div>
       </div>
