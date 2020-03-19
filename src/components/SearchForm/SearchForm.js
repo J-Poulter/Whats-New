@@ -1,14 +1,13 @@
 import React from 'react';
 import './SearchForm.css';
 
-// SEARCHFORM COMPONENT CODE GOES HERE
- const SearchForm = () => {
+const SearchForm = () => {
     
-    return (
-        <form>
-            <input placeholder='Search Text Here'/>
-            <button>Click To Search</button>
-        </form>
-    )
+  return (
+    <form>
+      <input placeholder='Search for news article here.' className='searchInput'/>
+      <button className='searchButton'>Search Now</button>
+    </form>
+  )
 }
 export default SearchForm;
