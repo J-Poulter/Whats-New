@@ -25,7 +25,6 @@ class SearchForm extends Component {
     return (
       <form>
         <input 
-          name='searchText'
           placeholder='Search for news article here.' 
           className='searchInput'
           onChange={this.updateState}
