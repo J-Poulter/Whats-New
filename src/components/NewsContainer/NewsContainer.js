@@ -9,9 +9,9 @@ const NewsContainer = (props) => {
       {
         props.local.map(article => (
           <NewsArticle 
-            id={article.id}
+            key={article.id}
             img={article.img}
-            headling={article.headline}
+            headline={article.headline}
             description={article.description}
             url={article.url}
           />
