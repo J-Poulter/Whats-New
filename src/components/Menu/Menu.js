@@ -2,32 +2,19 @@ import React from 'react';
 import './Menu.css'
 
  const Menu = (props) => {
-  /*let titles = props.categories.map(cate => {
-      return <p>{cate}</p>
-  })*/
   return (
     <div>
       <h1>What's <span>New?</span></h1>
-      <div>
-        <icon></icon>
-        <button className='menuButton'>★ Local News</button>
-      </div>
-      <div>
-        <icon></icon>
-        <button className='menuButton'>💡 Technology</button>
-      </div>
-      <div>
-        <icon></icon>
-        <button className='menuButton'>🎦 Entertainment</button>
-      </div>
-      <div>
-        <icon></icon>
-        <button className='menuButton'>🔬 Science</button>
-      </div>
-      <div>
-        <icon></icon>
-        <button className='menuButton'>🌡 Health</button>
-      </div>
+      {props.categories.map(category => {
+        return (
+          <div key={category.iconImg}>
+            <button className='menuButton' onClick={() => props.selectCategory(category.dataset)}> 
+              {category.iconImg} 
+              {category.title} 
+            </button>
+          </div>
+        )
+      })}
     </div>
   )
 }
