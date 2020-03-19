@@ -25,7 +25,7 @@ class App extends Component {
 
 
   selectCategory = (categoryTopic) => {
-    this.setState({ category: categoryTopic })
+    this.setState({category: categoryTopic})
   }
 
   render () {
