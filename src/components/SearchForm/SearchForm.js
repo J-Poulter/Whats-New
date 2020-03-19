@@ -5,8 +5,8 @@ const SearchForm = () => {
     
   return (
     <form>
-      <input placeholder='Search Text Here'/>
-      <button>Click To Search</button>
+      <input placeholder='Search for news article here.' className='searchInput'/>
+      <button className='searchButton'>Search Now</button>
     </form>
   )
 }
