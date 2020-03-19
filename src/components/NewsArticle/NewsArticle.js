@@ -4,7 +4,7 @@ import './NewsArticle.css';
 const NewsArticle = (props) => {
 
   return (
-    <article className='articleCard' id={props.key}>
+    <article className='articleCard' id={props.id}>
       <img src={props.img} className='articleImg' alt='Failed to Load'></img>
       <div className='cardInfo'>
         <h2 className='articleTitle'>{props.headline}</h2>
