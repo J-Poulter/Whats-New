@@ -8,30 +8,36 @@ import technology from '../../data/technology';
 import Menu from '../Menu/Menu';
 import SearchForm from '../SearchForm/SearchForm';
 import NewsContainer from '../NewsContainer/NewsContainer';
-import NewsArticle from '../NewsArticle/NewsArticle';
 import './App.css';
 
 class App extends Component {
   constructor() {
     super();
-    this.state = {local}
-    this.categories = [entertainment, local, health, science, technology]
+    this.state = { category: local }
+    this.categories = [
+      { title: 'entertainment', dataset: entertainment, iconImg: '★' }, 
+      { title: 'local', dataset: local, iconImg: '💡' }, 
+      { title: 'health', dataset: health, iconImg: '🎦' }, 
+      { title: 'science', dataset: science, iconImg: '🔬' }, 
+      { title: 'technology', dataset: technology, iconImg: '🌡' }
+    ]
   }
 
 
   selectCategory = (categoryTopic) => {
-    this.setState({categoryTopic})
+    this.setState({ category: categoryTopic })
   }
 
   render () {
     return (
       <div className='app'>
         <div className='leftColumn'>
-          <Menu categories={this.state.categories}/>
+          <Menu categories={this.categories}
+            selectCategory={this.selectCategory}/>
         </div>
         <div className='rightColumn'>
           <SearchForm />
-          <NewsContainer local={this.state.local}/>
+          <NewsContainer category={this.state.category}/>
         </div>
       </div>
     );
