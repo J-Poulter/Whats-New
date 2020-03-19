@@ -17,7 +17,7 @@ class SearchForm extends Component {
       let searchThis = this.state.searchText.toLowerCase()
       return article.headline.toLowerCase().includes(searchThis)
     })
-    
+    this.props.selectCategory(filteredCategory)
   }
     
   render() {
