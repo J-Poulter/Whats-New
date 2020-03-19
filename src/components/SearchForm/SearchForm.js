@@ -12,7 +12,12 @@ class SearchForm extends Component {
   }
 
   submitFilteredArticles = (event) => {
-
+    event.preventDefault();
+    let filteredCategory = this.props.category.filter(article => {
+      let searchThis = this.state.searchText.toLowerCase()
+      return article.headline.toLowerCase().includes(searchThis)
+    })
+    
   }
     
   render() {
