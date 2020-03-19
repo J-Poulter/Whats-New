@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './SearchForm.css';
 
-const SearchForm = () => {
+class SearchForm extends Component {
+  constructor() {
+    super();
+    this.state = {}
+  }
     
   return (
     <form>
       <input placeholder='Search for news article here.' className='searchInput'/>
-      <button className='searchButton'>Search Now</button>
+      <button className='searchButton' onClick={() => {
+        let filteredResults = props.category.filter(article => )
+      }}>Search Now</button>
     </form>
   )
 }
