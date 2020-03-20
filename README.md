@@ -18,3 +18,6 @@ Here we see the user make sure of the search bar located at the top.  The user i
 
 ![Searching](https://user-images.githubusercontent.com/51523262/77125856-18d02700-6a3f-11ea-8281-e4bbe8d4e1db.gif)
 
+### Setup
+
+To setup the application, go to the repository location at <https://github.com/J-Poulter/Whats-New> to download the necessary files.  Click the green button 'Clone or Download' and copy the http: address listed.  Next, open your terminal and navigate to the directory where you would like the app located.  Type 'git clone' followed by a space and then pasting the address you copied previously.  Once this is completed, navigate into the directory and run npm install.  After it's done with that you can run npm start and it will automatically open a react app website where you can use the app.
